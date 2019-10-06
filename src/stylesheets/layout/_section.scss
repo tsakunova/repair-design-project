@@ -1,0 +1,16 @@
+.offer{
+    display: grid;
+    grid-template-columns: 6% 94%;
+    &_insta{
+        transform: rotate(-90deg);
+        font-family: FuturaDemiC;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+    }
+    &_photo{
+        
+    }
+}

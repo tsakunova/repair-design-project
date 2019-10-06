@@ -1,0 +1,12 @@
+{
+  "name": "repair-design-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch src/stylesheets/main.scss:src/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
