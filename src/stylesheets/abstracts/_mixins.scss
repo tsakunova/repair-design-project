@@ -1,34 +1,8 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
-
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  }
+@mixin mq($size) {
+  @if      $size == screen-xs  { @media only screen and (min-width: $screen-xs) { @content; } }
+  @else if $size == screen-s { @media only screen and (min-width: $screen-s) { @content; } }
+  @else if $size == screen-sm  { @media only screen and (min-width: $screen-sm) { @content; } }
+  @else if $size == screen-md  { @media only screen and (min-width: $screen-md) { @content; } }
+  @else if $size == screen-lg  { @media only screen and (min-width: $screen-lg) { @content; } }
+  @else if $size == screen-xl  { @media only screen and (min-width: $screen-xl) { @content; } }
 }
-
-/// Make a context based selector a little more friendly
-/// @author Hugo Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
-  }
-}
-

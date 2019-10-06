@@ -1,12 +1,17 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
     background-color: $bgcolor;
+
+    @include mq(screen-lg) {
+        background-color: red;
+    }
 }
 
 .wrapper {
     width: 1440px;
     margin: 0 auto;
+
 }
